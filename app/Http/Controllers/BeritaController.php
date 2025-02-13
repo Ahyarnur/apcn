@@ -70,10 +70,10 @@ class BeritaController extends Controller
         
 
         if($request->file('foto')){
-            Storage::disk('local')->delete('public/'.$edit->foto);
+            Storage::disk('public')->delete('public/'.$edit->foto);
             $foto = $request->file('foto');
-            $foto->storeAs('public', $foto->hashName());
-            $edit->foto = $foto->hashName();
+            $lokasi = Storage::disk('public')->put('berita', $foto);
+            $edit->foto = $lokasi;
         }
 
         $edit->save();
