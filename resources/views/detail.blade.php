@@ -30,6 +30,7 @@
         <p class="mb-4">{{$detail->deskripsi}}</p>
     </div>
 
+p
     <!-- Back to Articles -->
     <div class="mt-4 text-center text-md-start">
         <a href="/beranda" class="text-decoration-none text-primary fw-medium">&larr; Kembali beranda</a>
